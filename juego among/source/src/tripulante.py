@@ -53,7 +53,7 @@ class Tripulante(Sprite):
             self.touch_portal = False
 
         elif user_input[pygame.K_UP] and not self.trip_jump:
-            jump_sound = pygame.mixer.Sound('sounds/jump.wav')
+            jump_sound = pygame.mixer.Sound('../sounds/jump.wav')
             jump_sound.play()
             self.trip_jump = True
             self.trip_run_left = False
@@ -108,7 +108,7 @@ class Tripulante(Sprite):
             self.jump_vel = self.JUMP_VEL
 
     def teleport(self):
-        teleport = pygame.mixer.Sound('sounds/teleport.mp3')
+        teleport = pygame.mixer.Sound('../sounds/teleport.mp3')
         teleport.play()
         self.Y_POS = 200
         self.Y_POS_DUCK = 205
@@ -117,7 +117,7 @@ class Tripulante(Sprite):
         self.trip_rect.x = self.X_POS
 
     def teleport_down(self):
-        teleport = pygame.mixer.Sound('sounds/teleport.mp3')
+        teleport = pygame.mixer.Sound('../sounds/teleport.mp3')
         teleport.play()
         self.Y_POS = 560
         self.Y_POS_DUCK = 565
@@ -140,7 +140,7 @@ class Tripulante(Sprite):
 
     def print_game_over(self, screen):
         if self.game_over:
-            game_over = pygame.mixer.Sound('sounds/lose.mp3')
+            game_over = pygame.mixer.Sound('../sounds/lose.mp3')
             game_over.play()
             self.image_game_over = GAME_OVER
             screen.blit(self.image_game_over, self.image_game_over_rect)

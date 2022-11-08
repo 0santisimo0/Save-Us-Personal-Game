@@ -53,7 +53,7 @@ class ObstaclesManager:
             if obstacle.rect.collidepoint(game.portal.portal_left_rect.centerx, 220):
                 obstacle.teleport_down_ground()
             if game.player.trip_rect.collidepoint(obstacle.rect.center):
-                die = pygame.mixer.Sound('sounds/muerte.mp3')
+                die = pygame.mixer.Sound('../sounds/muerte.mp3')
                 die.play()
                 pygame.time.delay(100)
                 game.death_count += 1

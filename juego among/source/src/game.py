@@ -22,7 +22,7 @@ class Game:
         pygame.init()
         pygame.display.set_caption(TITLE)
         pygame.display.set_icon(ICON)
-        pygame.mixer.music.load('sounds/nocturne.mp3')
+        pygame.mixer.music.load('../sounds/nocturne.mp3')
         self.clock = pygame.time.Clock()
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         self.playing = False
@@ -47,7 +47,7 @@ class Game:
         self.best_time = 0
 
     def run(self):
-        start_sound = pygame.mixer.Sound('sounds/boton.mp3')
+        start_sound = pygame.mixer.Sound('../sounds/boton.mp3')
         start_sound.play()
         self.points = 0
         self.player.reset_position()
@@ -234,7 +234,7 @@ class Game:
             victory_rect = VICTORY.get_rect()
             victory_rect.center = (SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3.2)
             self.screen.blit(VICTORY, victory_rect)
-            victory_sound = pygame.mixer.Sound('sounds/vic.mp3')
+            victory_sound = pygame.mixer.Sound('../sounds/vic.mp3')
             victory_sound.play()
             pygame.time.delay(1000)
             self.screen.blit(death_score, death_score_rect)

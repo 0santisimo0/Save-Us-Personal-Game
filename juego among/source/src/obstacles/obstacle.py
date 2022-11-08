@@ -17,13 +17,13 @@ class Obstacle(Sprite):
             obstacles_list.pop(0)
 
     def teleport_down_ground(self):
-        teleport = pygame.mixer.Sound('sounds/teleport.mp3')
+        teleport = pygame.mixer.Sound('../sounds/teleport.mp3')
         teleport.play()
         self.rect.x = 950
         self.rect.y = 565
 
     def teleport_down_air(self):
-        teleport = pygame.mixer.Sound('sounds/teleport.mp3')
+        teleport = pygame.mixer.Sound('../sounds/teleport.mp3')
         teleport.play()
         self.rect.x = 950
         self.rect.y = 450
